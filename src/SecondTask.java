@@ -1,15 +1,15 @@
 public class SecondTask {
 }
-// Абстрактний базовий клас Pair
-abstract class Pair {
+// Інтерфейс Pair
+interface Pair {
     // Абстрактні арифметичні операції
-    public abstract Pair add(Pair other);
-    public abstract Pair subtract(Pair other);
-    public abstract Pair multiply(Pair other);
+    Pair add(Pair other);
+    Pair subtract(Pair other);
+    Pair multiply(Pair other);
 }
 
 // Похідний клас Complex
-class Complex extends Pair {
+class Complex implements Pair {
     private double real;
     private double imaginary;
 
@@ -74,7 +74,7 @@ class Complex extends Pair {
 }
 
 // Похідний клас Rational
-class Rational extends Pair {
+class Rational implements Pair {
     private int numerator;
     private int denominator;
 
